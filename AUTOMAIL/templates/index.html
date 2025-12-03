@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Email Sender</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {{ url_for(
+</head>
+<body>
+  <div class="container">
+    <h1>Bulk Mail Sender</h1>
+
+    <section class="card">
+      <h2>Upload Excel</h2>
+      <input type="file" id="excelFile" accept=".xlsx,.xls" />
+      <button id="uploadBtn">Upload</button>
+      <div id="uploadStatus" class="status"></div>
+    </section>
+
+    <section class="card">
+      <h2>ENTER TEXT</h2>
+      <textarea id="message" rows="8" placeholder="Type the email text here..."></textarea>
+      <label>
+        Subject:
+        <input type="text" id="subject" placeholder="Notification" />
+      </label>
+      <div>
+        Attach Resume:
+        <input type="file" id="resumeFile" accept=".pdf,.doc,.docx" />
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Controls</h2>
+      <button id="startBtn" class="primary">Start</button>
+      <button id="stopBtn" class="danger">Stop</button>
+      <div id="controlStatus" class="status"></div>
+    </section>
+
+    <section class="card">
+      <h2>Status</h2>
+      <div>Total: <span id="total">0</span></div>
+      <div>Sent: <span id="sent">0</span></div>
+      <div>Running: <span id="running">false</span></div>
+      <div>Last Error: <span id="lastError">None</span></div>
+      <ul id="logList"></ul>
+    </section>
+  </div>
+  {{ url_for(</script>
+</body>
+</html>
